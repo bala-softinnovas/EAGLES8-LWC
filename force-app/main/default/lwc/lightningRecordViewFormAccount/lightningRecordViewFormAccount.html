@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="LIGHTNING RECORD VIEW FORM : ACCOUNT" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <!-- lightning record view form -->
+            <lightning-record-view-form
+                record-id={recordId}
+                object-api-name={objectName}>
+                <!-- lightning output fields -->
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <lightning-output-field field-name={fields.name}></lightning-output-field>
+                        <lightning-output-field field-name={fields.accountNum}></lightning-output-field>
+                        <lightning-output-field field-name={fields.type}></lightning-output-field>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-output-field field-name={fields.industry}></lightning-output-field>
+                        <lightning-output-field field-name={fields.revenue}></lightning-output-field>
+                        <lightning-output-field field-name={fields.phone}></lightning-output-field>
+                    </div>
+                </div>
+            </lightning-record-view-form>
+        </div>
+    </lightning-card>
+</template>
+
+
+<!--
+5 PARTS:
+1. Selection of fields (SELECT Id, Name, Type, Industry...)
+2. Selection of Object (FROM Account)
+3. Filter criteria (WHERE Id = '' AND Name = 'Universal Containers')
+-->

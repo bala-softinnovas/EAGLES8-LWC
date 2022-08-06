@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="CASE FORM">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+                record-id={recordId}
+                object-api-name={objectName}
+                fields={fields}
+                onsuccess={successHandler}>
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>
