@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="GET PICKLIST VALUES">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                label="Select an account type"
+                value={selectedType}
+                options={typeOptions}
+                onchange={changeHandler}>
+            </lightning-combobox>
+            <div class="slds-var-m-top_x-small">
+                Selected type is : {selectedType}
+            </div>
+        </div>
+    </lightning-card>
+</template>

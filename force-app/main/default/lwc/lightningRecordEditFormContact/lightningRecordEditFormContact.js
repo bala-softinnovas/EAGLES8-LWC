@@ -1,4 +1,5 @@
 import { LightningElement } from 'lwc';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 import CONTACT_OBJECT from '@salesforce/schema/Contact';
 import FIRSTNAME_FIELD from '@salesforce/schema/Contact.FirstName';
@@ -19,4 +20,13 @@ export default class LightningRecordEditFormContact extends LightningElement {
         phone: PHONE_FIELD,
         email: EMAIL_FIELD
     };
+
+    successHandler() {
+        const successToast = new ShowToastEvent({
+            title: "Success",
+            message: "Information has been saved successfully!",
+            variant: "success"
+        });
+        this.dispatchEvent(successToast);
+    }
 }

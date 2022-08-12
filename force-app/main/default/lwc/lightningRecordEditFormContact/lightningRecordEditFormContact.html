@@ -4,11 +4,34 @@
             <!-- lightning record edit form -->
             <lightning-record-edit-form
                 record-id={recordId}
-                object-api-name={objectName}>
+                object-api-name={objectName}
+                onsuccess={successHandler}>
                 <!-- lightning input fields -->
+                <lightning-messages></lightning-messages>
                 <div class="slds-grid slds-gutters">
-                    <div class="slds-col"></div>
-                    <div class="slds-col"></div>
+                    <div class="slds-col">
+                        <lightning-input-field field-name={fields.firstname}></lightning-input-field>
+                        <lightning-input-field field-name={fields.lastname}></lightning-input-field>
+                        <lightning-input-field field-name={fields.title}></lightning-input-field>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-input-field field-name={fields.department}></lightning-input-field>
+                        <lightning-input-field field-name={fields.phone}></lightning-input-field>
+                        <lightning-input-field field-name={fields.email}></lightning-input-field>
+                    </div>
+                </div>
+                <div class="slds-align_absolute-center">
+                    <lightning-button
+                        label="Cancel"
+                        variant="neutral"
+                        class="slds-var-m-right_x-small"
+                        type="reset">
+                    </lightning-button>
+                    <lightning-button
+                        label="Save"
+                        variant="brand"
+                        type="submit">
+                    </lightning-button>
                 </div>
             </lightning-record-edit-form>
         </div>
